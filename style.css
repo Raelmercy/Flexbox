@@ -1,0 +1,148 @@
+body{
+    height: 100px;
+}
+
+.image.area{
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.text-area{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text{
+    flex-wrap: wrap;
+    object-fit: cover;
+}
+
+.fixed{
+    height: 20px;
+    width: 100%;
+    background-color: purple;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.static{
+    height: 20px;
+    width: 100%;
+    background-color: yellow;
+    position: static;
+
+}
+
+.relative{
+    height: 20px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+ 
+}
+
+.absolute{
+    height: 200px;
+    width: 50%;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 300px;
+}
+.sticky{
+    height: 2
+    0px;
+    width: 1000%;
+    background-color: blue;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+.container.box{
+    width: 100%;
+
+}
+.container.box.image img{
+    width: 100%;
+}
+
+.animation-area{
+height: 400px;
+width: 100%;
+
+}
+.animation-area .animation-box{
+height: 400px;
+width: 400px;
+background-color: orange;
+animation: sliding 2s ease-in-out 2s infinite;
+}
+
+@keyframes sliding{  
+    from{
+        transform: translateX(300%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+.animation-area1{
+height: 400px;
+width: 100%;
+
+}
+.animation-area1 .animation-box1{
+height: 400px;
+width: 400px;
+border-radius: 50%;
+background-color: orange;
+animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce{  
+    from{
+        transform: translatey(0%);
+        background-color: blue;
+    }
+    to{
+        transform: translatey(-100%);
+        background-color: red;
+    }
+    
+}
+
+@media only screen and (max-width:767px){
+    .container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media only screen and (max-width:360px){
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media only screen and (max-width:528px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
